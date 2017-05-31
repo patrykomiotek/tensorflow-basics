@@ -1,0 +1,13 @@
+.idea/
+vEnv/
+
+__pycache__
+data
+MNIST_data
+logs
+MNIST-data
+log
+checkpoints
+MANIFEST
+*.py[cod]
+*$py.class
