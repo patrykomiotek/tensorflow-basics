@@ -1,5 +1,6 @@
 .idea/
 vEnv/
+saved_models/*
 
 __pycache__
 data

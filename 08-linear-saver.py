@@ -1,4 +1,9 @@
 import tensorflow as tf
+import os
+
+SAVED_MODELS_PATH = str(os.getcwd() + '/saved_models/meetjs')
+print(SAVED_MODELS_PATH)
+
 
 # Model parameters
 W = tf.Variable([.3], tf.float32)
@@ -26,7 +31,7 @@ for step in range(1000):
     sess.run(train, {x: x_train, y: y_train})
     if step % 100 == 0:
       # Append the step number to the checkpoint name:
-      saver.save(sess, '/tmp/tensorflow/pom-model', global_step=step)
+      saver.save(sess, SAVED_MODELS_PATH, global_step=step)
 
 # evaluate training accuracy
 curr_W, curr_b, curr_loss  = sess.run([W, b, loss], {x: x_train, y: y_train})
